@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>h1 {
+        display: block;
+        font-size: 2em;
+        margin-bottom: 2em;
+        font-weight: bold;
+        color: red;
+      }</style>
+</head>
+
+<body bgcolor="violet">        <center>
+
+    <div style="border: 5px solid green;background-image:linear-gradient(cyan,aqua,skyblue,grey,green,yellow);width:100vh;padding:4rem;margin: 5rem;">
+
+    <h1 align="center" >subtraction</h1>
+    <form action="/subtract" method="post">
+            enter your 1st no. <input type="number" name="ist" required placeholder="first no." title="first no.">
+            enter your 2nd no. <input type="number" name="iind" required placeholder="second no." title="second no."><br><br>
+            <button>click here</button>
+
+    </form>
+</div>
+</center>
+
+    <% if(message)
+    {%>
+       <center><h1><%=message%></h1></center>
+   <%}
+   %>
+</body>
+
+</html>

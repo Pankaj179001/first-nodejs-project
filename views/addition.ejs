@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+  display: block;
+  font-size: 2em;
+  margin-top: 0.67em;
+  margin-bottom: 0.67em;
+  margin-left: 0;
+  margin-right: 0;
+  font-weight: bold;
+  color: red;
+}
+    </style>
+</head>
+<body bgcolor="violet"> <center>    <div style="border: 5px solid green;background-image:linear-gradient(cyan,aqua,skyblue,grey,green,yellow);width:100vh;padding:4rem;margin: 5rem;">
+
+    <h1 align="center" color="red"> addition page</h1>
+   
+<form action="/add_now" method="post">
+    1st <input type="number" name="ist"required> <br><br>
+    2nd <input type="number" name="iind"required> <br><br>
+    <button>add Now</button>
+</form>
+</div>
+
+</center>
+<% if(result)
+{%>
+    <h1 align="center"><%=result%></h1>
+    <%}%>
+</body>
+</html>

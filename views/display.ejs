@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Page level plugin JavaScript-->
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+    <style>h1 {
+        display: block;
+        font-size: 2em;
+        margin-bottom: 2em;
+        font-weight: bold;
+        color: red;
+      }</style>
+</head>
+
+<body bgcolor="violet">
+    <h1 align="center"> student record list</h1>
+    <div class="container">
+        <table class="table table-bordered" border="1" align="center" id="dataTable">
+            <thead>
+                <tr>
+                    <th>student name</th>
+                    <th>student age</th>
+                    <th>student branch</th>
+                    <th>action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0;i<mydata.length;i++) {%>
+                    <tr>
+                        <td>
+                            <%=mydata[i].name%>
+                        </td>
+                        <td>
+                            <%=mydata[i].age%>
+                        </td>
+                        <td>
+                            <%=mydata[i].branch%>
+                        </td>
+                        <td><a href=" /delete_stu/?name=<%=mydata[i].name %>" onclick="return confirm('are you sure?');"class="btn btn-danger">delete</a> </td>
+                    </tr>
+
+                    <%}%>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#dataTable').DataTable();
+        });
+    </script>
+</body>
+
+</html>

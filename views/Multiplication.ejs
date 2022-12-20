@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>h1 {
+        display: block;
+        font-size: 2em;
+        margin-bottom: 2em;
+        font-weight: bold;
+        color: red;
+      }</style>
+</head>
+<body bgcolor="violet"><center>
+    <div style="border: 5px solid green;background-image:linear-gradient(cyan,aqua,skyblue,grey,green,yellow);width:100vh;padding:4rem;margin: 5rem;">
+    <h1 align="center">multiplication page</h1>
+    <form action="/find_multi" method="post" align="center">
+        ist value <input type="number" name="ist" required><br><br>
+        2nd value <input type="number" name="iist" required><br><br>
+    <button>submit</button>
+    </form>
+</div></center>
+    <% if(result)
+    {%>
+    <h1 align="center"><%=result%></h1>
+    <%}%>
+</body>
+</html>

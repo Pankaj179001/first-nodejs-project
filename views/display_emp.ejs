@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>emp table record</h1>
+
+    </center>
+    <center>  <table border="2">
+       <tr>  
+            <th>employee name</th>
+            <th>employee age</th>
+            <th>employee photo</th>
+        </tr>
+        <% for(key in value)
+        {%>
+            <tr>
+                <td><%=value[key].name%></td>
+                <td><%=value[key].age%></td>
+                <td><img src="./upload/<%=value[key].images%>" width="150px" height="200px" alt="photo"></td>
+                <td><a href="/download_now/<%=value[key].name%>">download pic</a></td>
+                <td><a href=" /delete_emp/?name=<%=value[key].name%>&age=<%=value[key].age%>" onclick="return confirm('are you sure?');">delete</a> </td>
+            </tr>
+        <%}%>
+    </table>
+</center>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>h1 {
+        display: block;
+        font-size: 2em;
+        margin-bottom: 2em;
+        font-weight: bold;
+        color: red;
+      }</style>
+</head>
+<body bgcolor="violet"><center>
+    <div style="border: 5px solid green;background-image:linear-gradient(cyan,aqua,skyblue,grey,green,yellow);width:100vh;padding:4rem;margin: 5rem;">
+
+    <h1>student registration form</h1>
+    <form action="/add_it" method="post">
+        student name <input type="text" name="name" required placeholder="your name"><br><br>
+        student age <input type="number" name="age" required placeholder="your age"><br><br>
+        student branch <select name="branch" required>
+            <option selected disabled value="">select student branch</option>
+            <option >computer science </option>
+            <option >civil engineering </option>
+            <option >mechanic engineer </option>
+        </select><br><br>
+        <button>submit</button>
+    </form>
+</div>
+    <% 
+     if(message)
+     {%>
+        <%=message%>
+    <%}%>
+</center>
+    
+</body>
+</html>
